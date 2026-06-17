@@ -41,6 +41,7 @@ vim.lsp.enable({
     "lua_ls",
     "nil",
     "nixd",
+    "haskell-language-server",
     "crates",
 })
 

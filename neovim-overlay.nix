@@ -63,6 +63,9 @@ with final.pkgs.lib; let
     (mkNvimPlugin inputs.ltex-ls-nvim-src "ltex-ls.nvim")
     ltex_extra-nvim
 
+    # Haskell
+    haskell-tools-nvim
+
     # Lean
     lean-nvim
 
@@ -81,6 +84,8 @@ with final.pkgs.lib; let
     lua-language-server
     ltex-ls
     rust-analyzer
+    haskellPackages.haskell-language-server
+    ghc
   ];
 in {
   nvim-pkg = mkNeovim {
