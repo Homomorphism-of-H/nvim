@@ -1,0 +1,1 @@
+A Neovim config based roughly upon kickstart-nix.nvim.
