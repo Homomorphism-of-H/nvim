@@ -46,14 +46,14 @@
         };
       in {
         packages = rec {
-          nvim = pkgs.nvim-pkg;
+          nvim = pkgs.wrapped-nvim;
           default = nvim;
         };
 
         apps = rec {
           nvim = {
             type = "app";
-            program = "${pkgs.nvim-pkg}/bin/nvim";
+            program = "${pkgs.wrapped-nvim}/bin/nvim";
           };
 
           default = nvim;
