@@ -87,9 +87,11 @@ with final.pkgs.lib; let
     haskellPackages.haskell-language-server
     ghc
   ];
-in {
-  wrapped-nvim = mkNeovim {
+in rec {
+  nvim-pkg = mkNeovim {
     plugins = all-plugins;
     inherit extraPackages;
   };
+
+  nvim = nvim-pkg;
 }
