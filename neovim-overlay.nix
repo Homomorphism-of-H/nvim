@@ -88,7 +88,7 @@ with final.pkgs.lib; let
     ghc
   ];
 in {
-  nvim-pkg = mkNeovim {
+  wrapped-nvim = mkNeovim {
     plugins = all-plugins;
     inherit extraPackages;
   };
