@@ -79,13 +79,21 @@ with final.pkgs.lib; let
 
   extraPackages = with pkgs; [
     # LSPs
+    ## Nix
     nil
     nixd
+    ## Lua
     lua-language-server
+    ## LaTeX
     ltex-ls
+    ## Rust
     rust-analyzer
+    ## Haskell
     haskellPackages.haskell-language-server
+    # TODO: Get rid of this
     ghc
+    ## Zig
+    zls
   ];
 in rec {
   nvim-pkg = mkNeovim {
